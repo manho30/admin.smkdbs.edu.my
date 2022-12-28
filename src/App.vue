@@ -1,14 +1,17 @@
 <template>
-  <tittle></tittle>
+  <header-container></header-container>
+  <timeLine></timeLine>
+  <dark-mode></dark-mode>
 </template>
 
 <script>
-import tittle from './components/index.vue'
-
+import timeLine from '@/components/timeline.vue'
+import HeaderContainer from "@/components/header";
 export default {
   name: 'App',
   components: {
-    tittle
+    timeLine,
+    HeaderContainer
   }
 }
 </script>
