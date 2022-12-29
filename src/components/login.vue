@@ -1,7 +1,10 @@
 <template>
   <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <h1 class="font-bold text-2xl text-gray-800 mb-3 md:text-3xl sm:text-2xl">
-      Selamat {{ timenow_word}}, Sila masukan akauan anda. <br><p class="font-bold text-gray-600"> {{timenow_utc8}}</p> </h1>
+      Selamat {{ timenow_word}}
+      <div v-if="isMobile"></div><div v-else></div>
+      Sila masukan akauan anda. <br>
+      <p class="font-bold text-gray-600"> {{timenow_utc8}}</p> </h1>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
         Username
@@ -32,7 +35,8 @@ export default {
     return {
       timenow_word: '',
       timenow_utc8: '',
-      timer: null
+      timer: null,
+      isMobile: null
     }
   },
   mounted() {
@@ -41,9 +45,13 @@ export default {
     this.timer = setInterval(() => {
       this.timenow_utc8 = this.getTimenowUTC8();
     }, 1000);
+    this.isMobile = this.getIsMobile();
   },
 
   methods: {
+    getIsMobile() {
+      return window.innerWidth < 768;
+    },
     getTimenowWord() {
       let date = new Date();
       let hour = date.getHours();
@@ -64,7 +72,7 @@ export default {
       let hour = date.getHours();
       let minute = date.getMinutes();
       let second = date.getSeconds();
-      return `${hour}:${minute}:${second}`;
+      return `${hour < 10 ? '0':''}${hour}:${minute < 10 ? '0':''}${minute}:${second < 10 ? '0':''}${second}`;
     }
   }
 };
