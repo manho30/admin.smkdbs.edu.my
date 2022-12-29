@@ -1,17 +1,18 @@
 <template>
   <header-container></header-container>
-  <timeLine></timeLine>
   <dark-mode></dark-mode>
+  <login-form class="mt-5"></login-form>
 </template>
 
 <script>
-import timeLine from '@/components/timeline.vue'
 import HeaderContainer from "@/components/header";
+import loginForm from "@/components/login";
+
 export default {
   name: 'App',
   components: {
-    timeLine,
-    HeaderContainer
+    HeaderContainer,
+    loginForm
   }
 }
 </script>
