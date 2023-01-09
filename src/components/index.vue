@@ -9,11 +9,18 @@
       </div>
     </div>
   </div>
+  <div class="bg-white rounded-md p-4 mt-3">
+    <sponsor></sponsor>
+  </div>
 </template>
 <script>
+import sponsor from "@/components/sponsor";
   export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'content1',
+    components: {
+      sponsor,
+    },
     data() {
       return {
         login: false,

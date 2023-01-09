@@ -53,6 +53,13 @@ export default {
       this.timenow_utc8 = this.getTimenowUTC8();
     }, 1000);
     this.isMobile = this.getIsMobile();
+    /** start event listener */
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        this.handleLogin();
+      }
+    });
+    /** end event listener */
   },
 
   methods: {
