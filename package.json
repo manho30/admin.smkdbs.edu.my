@@ -10,7 +10,7 @@
   "dependencies": {
     "ajax": "^0.0.4",
     "atob": "^2.1.2",
-    "axios": "^1.2.2",
+    "axios": "^1.2.3",
     "btoa": "^1.2.1",
     "core-js": "^3.27.1",
     "crypto-js": "^4.1.1",
