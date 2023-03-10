@@ -3534,10 +3534,10 @@ flowbite@1.5.4:
     "@popperjs/core" "^2.9.3"
     mini-svg-data-uri "^1.4.3"
 
-flowbite@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-1.6.1.tgz#6eb51b2e54ef2ce3931913df23838f08582add7d"
-  integrity sha512-043bg9bnDJf97yItNyH1kbs3+vWOqmGBQM9ia1cUpyOCRp9/IYrBXF7jjrQ0oedwW0Ws+ixJRK23iBsvRxzZYA==
+flowbite@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-1.6.4.tgz#ea86f8f90e8d1279e2611c25838f6d112777e7d3"
+  integrity sha512-//kSaigwERCcE3udumadB3+xfOXeN/ZQzcub2qVCHuB7uscB4XIm3yP9R8zL0XsEOnYG2lnroq/dydQZbzvESw==
   dependencies:
     "@popperjs/core" "^2.9.3"
     mini-svg-data-uri "^1.4.3"
